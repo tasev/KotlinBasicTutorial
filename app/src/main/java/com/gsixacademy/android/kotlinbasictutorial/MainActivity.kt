@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity")
 
+    //this is for commit test only
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
