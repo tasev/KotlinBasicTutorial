@@ -23,17 +23,9 @@ class MainActivity : AppCompatActivity() {
             var className = listActivities[i]
 
             when (className) {
-                
-                
                  "RelativeLayoutActivity" -> startActivity(Intent(applicationContext, RelativeLayoutActivity::class.java))
-                
-                
                  "CalculatorActivity" -> startActivity(Intent(applicationContext, CalculatorActivity::class.java))
-                
-                
                  "TodoListActivity"  -> startActivity(Intent(applicationContext, TodoListActivity::class.java))
-                
-                
                 }
 
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()
