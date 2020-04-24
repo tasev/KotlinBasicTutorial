@@ -20,6 +20,7 @@
         <activity android:name=".RelativeLayoutActivity"/>
         <activity android:name=".CalculatorActivity"/>
         <activity android:name=".TodoListActivity"/>
+        <activity android:name=".RecyclerViewActivity"/>
     </application>
 
 </manifest>
