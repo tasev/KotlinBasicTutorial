@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity", "RecyclerViewActivity")
 
     //this is for commit test only
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
                  "RelativeLayoutActivity" -> startActivity(Intent(applicationContext, RelativeLayoutActivity::class.java))
                  "CalculatorActivity" -> startActivity(Intent(applicationContext, CalculatorActivity::class.java))
                  "TodoListActivity"  -> startActivity(Intent(applicationContext, TodoListActivity::class.java))
+                 "RecyclerViewActivity" -> startActivity(Intent(applicationContext, RecyclerViewActivity::class.java))
                 }
 
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()
