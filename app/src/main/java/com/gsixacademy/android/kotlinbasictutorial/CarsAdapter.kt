@@ -24,7 +24,7 @@ class CarsAdapter(val itemList: ArrayList<Car>): RecyclerView.Adapter<RecyclerVi
 
     inner class MyViewHolder (view: View) : RecyclerView.ViewHolder(view){
         fun bindData(itemModel: Car) {
-            Picasso.get().load(itemModel.imageResource).fit().into(itemView.image_view_car)
+            Picasso.get().load(itemModel.imageResource).fit().fit().into(itemView.image_view_car)
 //            itemView.image_view_car.setImageResource(itemModel.imageResource)
             itemView.text_view_title.text = itemModel.title
             itemView.text_view_description.text = itemModel.description

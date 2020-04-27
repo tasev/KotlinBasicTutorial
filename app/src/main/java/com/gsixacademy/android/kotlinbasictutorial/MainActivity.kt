@@ -10,14 +10,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity", "RecyclerViewActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity", "RecyclerViewActivity", "LoginActivity")
 
     //this is for commit test only
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Picasso.get().load("https://wallpaperaccess.com/full/57166.jpg").fit().into(image_view_background)
+        Picasso.get().load("https://wallpaperaccess.com/full/57166.jpg").fit().fit().into(image_view_background)
 
         var activitiesAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,listActivities)
 
@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                  "CalculatorActivity" -> startActivity(Intent(applicationContext, CalculatorActivity::class.java))
                  "TodoListActivity"  -> startActivity(Intent(applicationContext, TodoListActivity::class.java))
                  "RecyclerViewActivity" -> startActivity(Intent(applicationContext, RecyclerViewActivity::class.java))
+                 "LoginActivity" -> startActivity(Intent(applicationContext, LoginActivity::class.java))
                 }
 
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()
