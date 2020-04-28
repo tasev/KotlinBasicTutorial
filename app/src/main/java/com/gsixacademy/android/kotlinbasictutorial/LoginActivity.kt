@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
         if(mySharedPreferences.contains("userName")){
             startActivity(Intent(applicationContext,UserSignedInActivity::class.java))
+            finish()
         }
 
         button_sign_in.setOnClickListener {
@@ -31,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
             mySharedPreferences.edit().putString("password", password).apply()
 
             startActivity(Intent(applicationContext,UserSignedInActivity::class.java))
+            finish()
         }
 
     }

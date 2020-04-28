@@ -1,6 +1,8 @@
 package com.gsixacademy.android.kotlinbasictutorial
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_recyclerview.*
 
@@ -27,7 +29,18 @@ class RecyclerViewActivity : AppCompatActivity() {
             listCars.add(Car("Nissan", "Nissan Description $number", R.drawable.nissan))
         }
 
-        var carsAdapter: CarsAdapter = CarsAdapter(listCars)
+        var carsAdapter: CarsAdapter = CarsAdapter(listCars) {
+            if(it is CarsAdapterClickEvent.CarsAdapterItemClicked){
+                var carClicked = it.car
+                Toast.makeText(applicationContext,"${carClicked.title}", Toast.LENGTH_LONG).show()
+
+                var intent = Intent(applicationContext, CarDetailsActivity::class.java)
+                    intent.putExtra("title",carClicked.title)
+                    intent.putExtra("description",carClicked.description)
+                    intent.putExtra("imageResource",carClicked.imageResource)
+                    startActivity(intent)
+            }
+        }
         recycler_view_activities.adapter = carsAdapter
 
     }
