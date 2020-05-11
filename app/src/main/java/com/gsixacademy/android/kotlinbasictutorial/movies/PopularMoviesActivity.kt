@@ -8,6 +8,7 @@ import com.gsixacademy.android.kotlinbasictutorial.R
 import com.gsixacademy.android.kotlinbasictutorial.api.ServiceBuilder
 import com.gsixacademy.android.kotlinbasictutorial.api.TheMovieDbApi
 import com.gsixacademy.android.kotlinbasictutorial.models.PopularMovies
+import kotlinx.android.synthetic.main.activity_movies.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,7 +31,10 @@ class PopularMoviesActivity: AppCompatActivity() {
 
                     val moviesList = popularMovies?.results
 
-                    Toast.makeText(applicationContext, " moviesList ${moviesList?.size}",Toast.LENGTH_LONG).show()
+                   if(moviesList!=null){
+                       var moviesAdapter = MoviesAdapter(moviesList){}
+                       recycler_view_movies.adapter = moviesAdapter
+                   }
 
                 }
             }
