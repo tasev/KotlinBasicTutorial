@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.gsixacademy.android.kotlinbasictutorial.movies.PopularMoviesActivity
+import com.gsixacademy.android.kotlinbasictutorial.people.PopularPeopleActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity", "RecyclerViewActivity", "LoginActivity", "PopularMoviesActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity", "RecyclerViewActivity", "LoginActivity", "PopularMoviesActivity", "PopularPeopleActivity")
 
     //this is for commit test only
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                  "RecyclerViewActivity" -> startActivity(Intent(applicationContext, RecyclerViewActivity::class.java))
                  "LoginActivity" -> startActivity(Intent(applicationContext, LoginActivity::class.java))
                 "PopularMoviesActivity" -> startActivity(Intent(applicationContext, PopularMoviesActivity::class.java))
+                "PopularPeopleActivity" -> startActivity(Intent(applicationContext, PopularPeopleActivity::class.java))
                 }
 
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()
