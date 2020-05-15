@@ -28,6 +28,7 @@
         <activity android:name=".CarDetailsActivity"/>
         <activity android:name=".movies.PopularMoviesActivity"/>
         <activity android:name=".people.PopularPeopleActivity"/>
+        <activity android:name=".search.SearchMoviesActivity"/>
     </application>
 
 </manifest>

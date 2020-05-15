@@ -13,5 +13,8 @@ interface TheMovieDbApi {
 
     @GET("/3/person/popular")
     fun getPopularPeople(@Query("api_key") key: String): Call<PopularPeople>
-    
+
+    @GET("/3/search/movie")
+    fun searchMovies(@Query("api_key") key: String, @Query("query") query: String): Call<PopularMovies>
+
 }
